@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Near Miss"
+date: 2015-08-03 23:14:12 -0400
+comments: true
+categories: ruby career
+---
+In my third year of college, I took a Programming Languages course that pretty much defined my career.
+
+The class was broken up into groups of four or five people, and each group had to pick a different programming language to study.  (Presumably, we reported on that language back to the rest of the class. I don't remember, but it's probably what happened...)
+
+I joined a group that would study Perl.  This was 1996/1997.  Perl would have been fairly popular at that point, being the tool the web ran on after basic HTML.
+
+I fell in love with Perl.  Of course, having previously studied languages like Scheme and C and Pascal, of course Perl would look and sound beautiful.  It was powerful and easy to read, with lots of creative opportunities for a programmer.
+
+For Christmas that year, I got the Perl Black Book and a CD with a Linux distribution on it. (I think it was Slackware, the world's worst version of Linux to attempt to put on a computer for a newbie.)  Even after the class was over, I could play with Perl on my own.
+
+Years later, I found an opportunity to insert Perl into some client work I was doing and it quickly became my thing at the company.
+
+Looking back, I don't remember much else about that programming course, aside from the professor being a temporary prof who put all her notes on one long HTML slide that she'd share with the class... eventually. But I do remember that one of the other languages I could have chosen to study that semester had a ridiculous sounding name.
+
+SmallTalk.
+
+Part of me looks back now and wonders if I had chosen a different group in that class back in 1996/1997, would I have glommed onto Ruby earlier and been a Rails programmer, instead?
+
+Missed opportunity?

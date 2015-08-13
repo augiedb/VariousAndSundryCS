@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Map"
+date: 2014-09-30 12:55:01 -0400
+comments: true
+categories: Google maps
+---
+
+I loaded up [Google Maps](http://maps.google.com) to find directions to a birthday party in the area this weekend.  The name of the place started "Be".  At that point, Google stepped in to offer suggestions of where I might like to go.
+
+Their first option was Belgium.
+
+OK, not exactly the place in Northern New Jersey that I was looking for, but what the heck?  I clicked on it:
+
+{% img http://variousandsundry.com/cs/images/maps_to_belgium.png %}
+
+That's pretty fancy, right there.  It offers directions to the airport and a schedule of flights, along with their approximate prices.
+
+I'm still not going to Belgium, but that's pretty cool.

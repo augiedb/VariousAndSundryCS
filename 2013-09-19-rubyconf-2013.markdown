@@ -1,0 +1,26 @@
+---
+layout: post
+title: "RubyConf 2013"
+date: 2013-09-19 22:07
+comments: true
+categories: 
+---
+[RubyConf this year has a good mix of programming.](http://rubyconf.org/program)  There are some on topics I don't much care about, some that are way high above my level, and some that I look forward to seeing on [ConFreaks](http://confreaks.com). 
+
+Some highlights for me:
+
+* **"The Polyglot in the Code - An Elixir/Ruby Mashup"**  I'm a sucker for Elixir.
+
+* **"Build your own Ruby-powered Arcade Machine!"** Nothing that I would immediately turn around and use, but sounds like a fun dream project.  That said, I AM working on a card game in Ruby just for learning's sake.  Command-line based card games are likely not commercial winners, after all.  On the other hand, once I have the guts of the game working, what's to stop me from porting it to something more visual?
+
+* **"Your Development Machine in the Cloud"**  I want to learn more about TMUX.
+
+* **"Eliminating branching, nil and attributes - let's get weird"**  Sounds like a fun way to learn more about object oriented programming, which is something I'm always on the lookout for.  Feels like I'm making up for lost time there.
+
+* **"That's Not Very Ruby of You"** Sounds like a solid Ruby-specific presentation. I bring my Perl background to Ruby, so learning how to do things more Ruby-centric is a good idea.  Breaks me of my "bad" habits.
+
+* **"Recommendation Engines with Redis and Ruby"** Above my paygrade, but an interesting topic.
+
+* **"Beneath The Surface: Harnessing the True Power of Regular Expressions in Ruby"** Hey, I'm a recovering Perl programmer. OF COURSE I'd want to see a regular expressions talk.
+ 
+ * "How To Roll Your Own Ops Framework In Ruby (If You Really Have To)"  I've never been an infrastructure guy, but DevOps stuff fascinates me.

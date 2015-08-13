@@ -1,0 +1,17 @@
+---
+layout: post
+title: "The Amiga 3000"
+date: 2014-03-09 20:25:22 -0400
+comments: true
+categories: commmodore,amiga
+---
+A quick trip down memory lane...
+
+I grew up with a Commodore 64, but always wished for an Amiga.  Those things were _powerful_, right?  They even had models with hard drives in them so you didn't need to switch floppy disks out of the disk drive so often to load a word processor or whatnot.
+
+Here's a walkthrough, 20 years later, of [the Amiga 3000](http://en.wikipedia.org/wiki/Amiga_3000) (released June 1990), from the paint programs to the web browsers.  Pretty impressive for a machine that old.
+
+{% youtube JXrM97yhbM8 %}
+
+...
+

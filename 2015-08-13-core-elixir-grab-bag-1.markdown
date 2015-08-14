@@ -5,6 +5,7 @@ date: 2015-08-13 22:23:07 -0400
 comments: true
 categories: elixir Elixir coreelixir CoreElixir
 ---
+{% img http://variousandsundry.com/cs/images/elixir_grabbag.jpg %}
 
 In the course of researching "Core Elixir" articles, I come across all sorts of little points of interest that don't always fit into the article, no matter how far I stretch them. Those wind up in a little scrap file.  That scrap file becomes the Grab Bag.
 
@@ -57,7 +58,7 @@ If you do declare a function that ends in a question mark that returns an intege
    
 ## Erlang is Not For the Feint of Heart
 
-The Supervisor shutdown variable is a bloodthirsty one.  You can choose between [three values when shutting down a Supervisor](https://github.com/elixir-lang/elixir/blob/4f68c4f10502e0f54a21093bb9a33957e63a9ac4/lib/elixir/lib/supervisor/spec.ex#L139).  
+The Supervisor shutdown variable is a bloodthirsty one.  You can choose between [three values when shutting down a Supervisor](http://elixir-lang.org/docs/v1.0/elixir/Supervisor.Spec.html).  
 
 First, there is `:infinity`.  This is the most forgiving option, leaving the child process that is another Supervisor all the time it needs to stop everything below it first before the Supervisor dies off.
 

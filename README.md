@@ -10,3 +10,5 @@ Parts of Elixir source code and documentation are quoted. It's Fair Use-worthy, 
 # Pull Requests 
 
 If you see any factual errors, misspellings, or have better code suggestions, open a pull request or an issue.  I want this stuff to work, most of all.
+
+Any suggestions?  Open an issue, I guess. We'll work this out...  

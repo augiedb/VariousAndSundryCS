@@ -56,7 +56,7 @@ And, because Elixir allows for it (as in Ruby), the question mark in the functio
 If you do declare a function that ends in a question mark that returns an integer, prepare yourself for a pull request to fix that...
 
    
-## Erlang is Not For the Feint of Heart
+## Erlang is Not For the Faint of Heart
 
 The Supervisor shutdown variable is a bloodthirsty one.  You can choose between [three values when shutting down a Supervisor](http://elixir-lang.org/docs/v1.0/elixir/Supervisor.Spec.html).  
 

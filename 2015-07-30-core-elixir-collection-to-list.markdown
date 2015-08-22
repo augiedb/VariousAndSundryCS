@@ -303,11 +303,11 @@ Really, is there anything that `reduce` can't do?
 
 ## Summing it all up
 
-If you feel the need to convert a collection to a list, just reverse it.  Twice.  Once in Elixir, once in Erlange.
+If you feel the need to convert a collection to a list, just reverse it.  Twice.  Once in Elixir, once in Erlang.
 
 For extra credit, pin a tail on it afterwards.
 
-_If you have any comments, questions, complaints, criticisms, or corrections, catch me on Twitter, [@AugieDB](https://twitter.com/augiedb).  That handle is the same as my GMail account, if you need to type more characters. I want these articles to be factually correct and will update them as necessary._
+_If you have any comments, questions, complaints, criticisms, or corrections, catch me on Twitter, @AugieDB. Or make a pull request on Github! That Twitter handle and Github ID is the same as my GMail account, if you want to deal with it more quietly. I want these articles to be factually correct and will update them as necessary._
 
 _(8)_
 

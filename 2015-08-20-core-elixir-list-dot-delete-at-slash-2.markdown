@@ -77,7 +77,7 @@ When you offer the function a negative number to count backwards with, it's all 
 
 ## The Source
 
-`delete_at` is a gatekeeper function, meant to make things a little easier for the programmer.  It exists to handle the negative index first before passing everything along to `do_delete_at`, which is a private function that takes two values: the list and the index.
+`delete_at` is a gatekeeper function, meant to make things a little easier for the programmer.  It exists to convert the negative index into a positive value first before passing everything along to `do_delete_at`, which is a private function that takes two values: the list and the index.
 
 Let's start with a positive number example, and look more closely at `do_delete_at`.
 
@@ -127,6 +127,8 @@ Once you have that in your mind, the rest of them are easy.  2, 3, 4, etc. just 
 
 As a nifty bonus, you don't need to reverse the list at the end.  The process maintains the order as it goes along. 
 
+
+
 ## Counting Backwards
 
 A negative index does something interesting.  There's no code for explicitly counting backwards.  `do_delete` instead calculates the forward-counting position in the list to delete.  It adds the length of the list (hello, `List.length/1`) to the negative number you provided and deletes that item.  
@@ -136,6 +138,41 @@ For example: If your list is the numbers 1 through 5 and you want to delete the 
 Voila!
   
 That was "simple."
+
+
+## Wait, What About That Middle Function?
+
+_Update: 8/23/2015 Answering [a Reddit question](http://variousandsundry.com/cs/blog/2015/08/20/core-elixir-list-dot-delete-at-slash-2/) here, which I skipped over in the initial explanation._
+
+What, this one in `List.do_delete_at`?
+
+```elixir
+defp do_delete_at(list, index) when index < 0 do
+  list
+end
+```
+
+That's there in case the negative value the user submits has an absolute value greater than the length of the list.  if the user does something silly like that, Elixir will just pass back the original list, much the same way it does when the user provides a positive index greater than the length of the list.
+
+```elixir
+iex> a = [1,2,3,4,5]
+iex> List.delete_at(a, -100)
+[1, 2, 3, 4, 5]
+```
+
+The gateway function (`List.delete_at/2`) doesn't test for a negative value's actual value. That happens inside the private functions' (`List.do_delete_at/2`) pattern matching.  This is what the gateway looks like:
+
+```elixir
+  def delete_at(list, index) do
+    if index < 0 do
+      do_delete_at(list, length(list) + index)
+    else
+      do_delete_at(list, index)
+    end
+  end
+```
+
+You'll see that while it checks to see if the index value being passed in is negative, it doesn't check to make sure that it isn't TOO negative. That happens in the next step.
 
 
 ## Coming Up Next Week

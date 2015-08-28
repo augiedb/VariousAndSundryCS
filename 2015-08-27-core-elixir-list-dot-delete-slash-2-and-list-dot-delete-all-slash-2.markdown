@@ -6,6 +6,7 @@ comments: true
 categories: elixir coreelixir CoreElixir Elixir core delete Enum filter map reduce
 ---
 
+{% img http://variousandsundry.com/cs/images/elixir_delete_all.jpg %}
 
 [Last week, we looked at List.delete_at](http://variousandsundry.com/cs/blog/2015/08/20/core-elixir-list-dot-delete-at-slash-2/), which deletes a value at a specific position of a given list.
 

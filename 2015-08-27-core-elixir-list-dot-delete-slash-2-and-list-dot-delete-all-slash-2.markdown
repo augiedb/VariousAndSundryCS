@@ -42,7 +42,7 @@ We'll try recursion with a dash of pattern matching:
     delete_all(list, value, []) |> Enum.reverse
   end
 
-  defp delete_all([h|[]], value, end_list) when h == value do
+  defp delete_all([h|[]], value, end_list) when h === value do
     end_list
   end
 
@@ -50,7 +50,7 @@ We'll try recursion with a dash of pattern matching:
     [h|end_list]
   end
 
-  defp delete_all([h|t], value, end_list) when h == value do
+  defp delete_all([h|t], value, end_list) when h === value do
     delete_all(t, value, end_list)
   end
 
@@ -102,7 +102,7 @@ The problem I'm solving for here is an obvious __filter__.  We need to filter ou
 
 ```elixir 
   def delete_all(list, value) do
-    Enum.filter(list, fn(x) -> x != value end)
+    Enum.filter(list, fn(x) -> x !== value end)
   end
 ```
 
@@ -137,7 +137,7 @@ What if we rewrote our `delete_all` function directly with the list comprehensio
 
 ```elixir
 def delete_all_filter(collection, value) when is_list(collection) do
-  fun = fn(x) -> x != value end
+  fun = fn(x) -> x !== value end
   for item <- collection, fun.(item), do: item
 end
 ```
@@ -170,7 +170,7 @@ Oh, we've gone this deep, already. Why not?
 ```elixir
   def delete_all(collection, value) do
     Enum.reduce( collection, [], fn(x, acc) ->
-      case x != value do
+      case x !== value do
         true  -> [x | acc]   # Not the value, add it to the list
         false -> acc         # Matches the value, so don't add it
       end

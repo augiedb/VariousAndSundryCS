@@ -116,8 +116,10 @@ The error codes are taken from POSIX error code standards. Here is a small sampl
 * __eisdir__ - Not a file. Might be a directory. Or a device. 
 * __enotdir__ - Not a directory
 * __enospc__ - No space.  The drive/disk partition is full.
-* __eperm__ - Operation Not Permitted (Are you deleting a file you don't have access to?)
+* __eperm__ - Operation Not Permitted (You can't do that; it doesn't make sense.)
 * __efbig__ - Your file is too effing big. 
+
+(For more details on the difference between "eperm" and "eacces", [check out this article](http://www.comicbookdb.com/graphics/comic_graphics/1/679/32616_20150118104424_large.jpg).  Thanks for the link, [Jan](https://github.com/jandudulski)!)
 
 You can find more errors listed in [the Erlang File module documentation](http://www.erlang.org/doc/man/file.html).  See if you can guess what they all mean, then compare them to [this ridiculously exhaustive list](http://www.ioplex.com/~miallen/errcmp.html) that will make your eyes bleed.  
 

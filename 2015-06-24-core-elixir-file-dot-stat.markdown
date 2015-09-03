@@ -22,7 +22,7 @@ If you have any experience with programming on a Linux or Unix box, a lot of thi
 Those values include the file's permissions, size, the file system id, and more. You can, of course, `man stat` for further information at the command line.
 
 
-# The Source
+## The Source
 
 In the Elixir world, that command is rewritten as `File.stat/2`.  Other languages have similar things.  [Perl](http://perldoc.perl.org/File/stat.html) and [Ruby](http://ruby-doc.org/core-2.2.2/File/Stat.html), for example, both have their own `File::Stat` modules.
 
@@ -40,7 +40,7 @@ In the end, your Elixir request gets a chunk of data like this in response:
 Of the three languages I've mentioned in this post, I like this one the best.  It just gives you all the results along with the descriptive names in one big shot.  You can parse/pattern match and transform all you like from there.  No need to remember which values come in which order, or what the naming convention for the new object is.  It's all laid out for you right there in the returned value.
 
 
-# The Options
+## The Options
 
 You can pass along an option list to go along with that file path.  You don't get a lot of options, but they might come in handy for your time-keeping needs:
 
@@ -92,7 +92,7 @@ iex> File.stat(f, [time: :posix])
 That time stamp equates to 'run it through Google and hope for the best.'  ([Here's one.](http://www.epochconverter.com))
 
 
-# Bang!  
+## Bang!  
 
 There's a variation on `File.stat`, too, with `File.stat!`  The difference is that exclamation point at the end.  It's an Elixir convention that a module ending in an exclamation point will not return a tuple, but rather the information you requested, or an error.
 

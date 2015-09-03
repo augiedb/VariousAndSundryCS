@@ -66,7 +66,7 @@ This tutorial is showing great range, isn't it?
 
 
 
-# The Protocols. Oh, the Protocols!
+## The Protocols. Oh, the Protocols!
 
 There are three protocols that `Range` maps to, and that's what takes up the second half of the module.
 
@@ -94,7 +94,7 @@ I'm sure it has to do with the way languages are parsed and Abstract Syntax Tree
 
 My kingdom for a macro!
 
-# Count Along with Range
+## Count Along with Range
 
 Finally, the `Range` module has a `count` function, which you can likely guess the purpose of.
 
@@ -127,7 +127,7 @@ iex> inspect(r)
 
 Hey, nothing in a programming language appears by magic, even something so simple of showing the value of a variable.  It all needs to be coded in somewhere.
 
-# Your Range Power Tip of the Day
+## Your Range Power Tip of the Day
 
 You can have descending ranges!  10..1 is just as valid as 1..10, though obviously your outcome will be wildly different for many functions.
 

@@ -44,7 +44,7 @@ Both `IO.puts` and `IO.write` allow you to send your output to different locatio
 But, you may ask yourself if you're bored one day, how does interpolation work?
 
 
-# How Does Interpolation Work?
+## How Does Interpolation Work?
 
 I'm glad you asked. It's sorta like polymorphism. Yes, welcome to that rabbit hole...
 
@@ -87,7 +87,7 @@ Hello, {1, 'a'}
 :ok
 ```
 
-# Inspect This
+## Inspect This
 
 {% img http://variousandsundry.com/cs/images/elixir-inspect_colored_lettered.jpg %}
 
@@ -143,7 +143,7 @@ You can, of course, see all the parameters [in the Inspect.Opts documentation](h
 
 OK, let's work our way back up to the polymorphism I promised earlier.
 
-# Polymorphic Protocol
+## Polymorphic Protocol
 
 
 `String.chars` is [a protocol](http://elixir-lang.org/docs/v1.0/elixir/Kernel.html#defprotocol/2).  That is, it creates a set of formulas that anyone following the protocol must create for their particular module if they want to proclaim themselves as conforming to a specific protocol.
@@ -155,7 +155,7 @@ So, multiple modules will have a `to_string` function, and it'll work the same e
 With `String.chars`, you can print the values of certain variable types out to a string, such as in the example we started this whole essay with.  `IO.puts` can only print the value of a variable out to the screen as long as the variable is of a type that can be converted to a string, either through `String.chars` protocol or `Kernel.inspect`.  The `#{}` is just shorthand for all of that.
 
  
-# To Sum It Up
+## To Sum It Up
 
 IO.puts prints stuff to the screen, and you can include variables in that.
 
@@ -164,7 +164,7 @@ When you interpolate a value into a string, you're using a couple of Kernel modu
 Thankfully, you didn't go with  the <> operator, instead, because then we could travel down a fun road of macro programming that would take another thousand words to get through. 
 
 
-# Completely Unrelated
+## Completely Unrelated
 
 In my research for this Core Elixir installment, I came across a website with ["Hello World" examples in dozens of languages](http://c2.com/cgi/wiki?HelloWorldInManyProgrammingLanguages).
 
@@ -172,7 +172,7 @@ The 'winner' of the page is a tie between the Whitespace language and [the Obfus
 
 Really, that Perl example will blow your mind.
 
-# Scheduling Notice
+## Scheduling Notice
 
 I'm off to [OSCon](http://www.oscon.com/open-source-2015) next week, so Core Elixir will be taking a week off.  It'll be back the following week.  Thanks for not weeping openly at this news.
 

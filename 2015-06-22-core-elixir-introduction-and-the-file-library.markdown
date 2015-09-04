@@ -23,13 +23,13 @@ And, occasionally, you can watch my frustration or ignorance boil over into some
 
 The biggest thing I've noticed so far is easy to sum up:
 
-# Elixir is Elixir
+## Elixir is Elixir
 
 __I'm amazed at how much of Elixir is written in Elixir.__  You can see smaller building blocks being written in Elixir, and then the slightly more complicated ones building themselves on top of those smaller bits.  And when Elixir doesn't have the answer, Erlang _does_ and can be called out to. It's a remarkably efficient way to create a language that improves on what's there and doesn't just copy it as an exercise.  If the latter were true, Elixir wouldn't be nearly as popular as it is today.
 
 I've paid the most attention recently to the Elixir `File` module. As a Perl programmer, being able to manipulate files in various ways is of special interest to me.  So much of the work I've done in my career has been in automating things that this module does the individual parts of. I can't help but look here first.
 
-# The File Libraries
+## The File Libraries
 
 __Elixir's `File` library is mostly a wrapper around Erlang's `File` module.__  Or, as we Elixir folks like to call it, `:file`.  The effect is so strong that `:file`, itself, is aliased at the very top of the Elixir File module to save a lot of typing, like so:
 
@@ -39,13 +39,13 @@ __Elixir's `File` library is mostly a wrapper around Erlang's `File` module.__  
 
 Seriously, it's the second line of non-commented code in the module.  It's just that important.
 
-# What's In a Name?
+## What's In a Name?
 
 Elixir creator, Jose Valim, has spoken out in that past on the importance of Elixir being about more than just wrapping Erlang functions.  So what's he adding here, specifically?  From what I've seen, the biggest addition to the language that this module gives us is the ability to think in more Unix-y terms.
 
 Erlang's file manipulation code is much more florid in its prose.  It's descriptive, but not intuitive to a modern programmer, necessarily. Erlang has function names like `get_cwd` and `set_cwd` instead of `cwd` and `cd`.  Elixir's `stat` is Erlang's `read_file_info`.  It may feel like Erlang's syntax here is more expressive and plainer in its English, but __Elixir utilizes the programmer's built-in knowledge of the Unix commands__.  As a programmer, you don't need to translate Unix to Elixir, or learn a second set of commands to do the same things as the command you already know.  The Unix and Elixir commands are identical, for the most part.  
 
-# Code Pattern
+## Code Pattern
 
 Elixir has private functions, which are defined with a `defp`.  Those, as that description might suggest to you, aren't available to the programmer using the library.  
 
@@ -80,7 +80,7 @@ You know how people tend to like short pull requests? That one deleted 5 charact
 
 I <3 open source.
 
-# Coming Soon...
+## Coming Soon...
 
 `File.stat` -- Or, "inode  for Elixir".  Or, `File#stat` for Elixir.  Or, even `:file.stat` for Elixir.
 

@@ -178,7 +178,7 @@ Oh, we've gone this deep, already. Why not?
   end
 ```
 
-Note it still has the same user interface.  It's still a list and a value for the two parameters and that's it. The `reduce` function takes care of the rest.  The only complication here is the `case` statement I had to throw in. If there's a way around it without adding more functions, please drop me a line or an issue/pull request. I'd love to simplify this further, so long as it's readable. _(We have a taker!  See "A Prettier Reduce" below..)_
+Note it still has the same user interface.  It's still a list and a value for the two parameters and that's it. The `reduce` function takes care of the rest.  The only complication here is the `case` statement I had to throw in. If there's a way around it without adding more functions, please drop me a line or an issue/pull request. I'd love to simplify this further, so long as it's readable. 
 
 The way this works is by using basically the same function we used above, but instead of just returning one value at a time, the reduce statement grows its own list as the list is traversed.  It does, however, return the list backwards, so we pipe the results to `Enum.reverse` to straighten it back out.  Now the input __and__ the output of this function are identical to the other options discussed above.
 
@@ -186,22 +186,6 @@ In the end, I think the `filter` solution is the cleanest and clearest to me. It
 
 Sure, I'll go with that.
 
-## A Prettier Reduce
-
-__Update 9/3/2015:__
-
-[Kash Nouroozi](http://twitter.com/knrz_) helpfully suggests a prettier version of the reduce code above, and one that doesn't require a `reverse` command afterwards:
-
-```elixir
-def delete_all(collection, value) when is_list(collection) do
-  List.foldr(collection, [], fn
-    {^value, acc} -> acc
-    {x, acc}      -> [x|acc]
-  end
-end
-```
-
-It uses a `foldr` command, which is something I plan on discussing more in a future Core Elixir.  Stay tuned...
 
 _If you have any comments, questions, complaints, criticisms, or corrections, catch me on Twitter, [@AugieDB](https://twitter.com/augiedb). Or [make a pull request on Github](https://github.com/augiedb/VariousAndSundryCS)!  That Twitter handle and Github ID is the same as my GMail account, if you want to deal with it more quietly. I want these articles to be factually correct and will update them as necessary._
 

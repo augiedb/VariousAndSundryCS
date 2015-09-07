@@ -60,7 +60,7 @@ You can pattern match inside the arguments.  If you're looking for the case wher
   defp delete_all([value|t], value, end_list) do
 ```
 
-Now, look at that and realize that in one major case, it's the same function.  When the tail is an empty list, the first version will be triggered instead of the second.  But why bother?  They can be treated the same way if your base case (the one that returns the final results) is just looking for an empty list in the end.
+Now, look at that and realize that in one major case, it's the same function.  When the tail is an empty list, the first version will be triggered instead of the second.  Can we combined those two into one?  Yes, if the base case (the one that returns the final results) is rewritten to look for just an empty list.
 
 Those middle three functions can then be combined down into two:
 
@@ -82,9 +82,9 @@ Those middle three functions can then be combined down into two:
   end
 ```
 
-Your variants of the private function handle the cases where the value is the same as the head, the two are different, and you have an empty list.  That's a lot more straight forward and obvious than my initial version was.
+Your variants of the private function handle the cases where (1) the value is the same as the head, (2) the two are different, and (3) you have an empty list.  That's a lot more straight forward and obvious than my initial version was, where you had alternate versions of the same function depending on a guard statement that was redundant and the base case was one step removed from the end of the actual list. It just plain old makes more sense. 
 
-Thanks to pel-daniel for the refactoring suggestion.
+_Thanks again to pel-daniel for the refactoring suggestion._
 
- _If you have any comments, questions, complaints, criticisms, or corrections, catch me on Twitter, [@AugieDB](https://twitter.com/augiedb). Or [make a pull request on Github](https://github.com/augiedb/VariousAndSundryCS)!  That Twitter handle and Github ID is the same as my GMail account, if you want to deal with it more quietly. I want these articles to be factually correct and will update them as necessary._
+_If you have any comments, questions, complaints, criticisms, or corrections, catch me on Twitter, [@AugieDB](https://twitter.com/augiedb). Or [make a pull request on Github](https://github.com/augiedb/VariousAndSundryCS)!  That Twitter handle and Github ID is the same as my GMail account, if you want to deal with it more quietly. I want these articles to be factually correct and will update them as necessary._
 

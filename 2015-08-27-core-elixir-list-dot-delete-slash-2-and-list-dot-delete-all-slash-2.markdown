@@ -112,7 +112,7 @@ Map. Filter. Reduce.
 
 Such helpful concepts.
 
-Functional programmers love it so much, they even combine them.  [Elixir's Enum library](http://elixir-lang.org/docs/v1.0/elixir/Enum.html#flat_map/2) also contains `map_reduce/3` and 'filter_map/3`.  There's even something called `flat_map_reduce/3`.
+Functional programmers love it so much, they even combine them.  [Elixir's Enum library](http://elixir-lang.org/docs/v1.0/elixir/Enum.html#flat_map/2) also contains `map_reduce/3` and `filter_map/3`.  There's even something called `flat_map_reduce/3`.
 
 ## Filter It, Just a Little Bit (More)
 

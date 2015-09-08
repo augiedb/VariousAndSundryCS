@@ -22,7 +22,7 @@ I'm a heretic.
 
 ## Refactoring
 
-[I had a pull request from pel-daniel](https://github.com/augiedb/VariousAndSundryCS/pull/3), who made a smart observation about my original `List.delete_all` code.  Here's what I started with:
+[I had a pull request from Daniel Garcia](https://github.com/augiedb/VariousAndSundryCS/pull/3), who made a smart observation about my original `List.delete_all` code.  Here's what I started with:
 
 ```elixir
   def delete_all(list, value) do
@@ -84,7 +84,39 @@ Those middle three functions can then be combined down into two:
 
 Your variants of the private function handle the cases where (1) the value is the same as the head, (2) the two are different, and (3) you have an empty list.  That's a lot more straight forward and obvious than my initial version was, where you had alternate versions of the same function depending on a guard statement that was redundant and the base case was one step removed from the end of the actual list. It just plain old makes more sense. 
 
-_Thanks again to pel-daniel for the refactoring suggestion._
+## Reduce It Again
+
+I wrote up a basic `reduce` function to do the same thing, admitting that I thought it might be done cleaner somehow.
+
+In jumped [Kash Nouroozi](https://twitter.com/knrz_) with [a gist](https://gist.github.com/knrz) to change my function --
+
+```elixir
+def delete_all(collection, value) do
+  Enum.reduce( collection, [], fn(x, acc) ->
+    case x !== value do
+      true  -> [x | acc]   # Not the value, add it to the list
+      false -> acc         # Matches the value, so don't add it
+    end
+  end)  |> Enum.reverse
+end
+```
+
+-- to something more elegant using `foldr` that doesn't even need the `reverse` at the end:
+
+```elixir
+def delete_all(collection, value) when is_list(collection) do
+  List.foldr collection, [], fn
+    x, acc when x == value ->
+      acc
+    x, acc ->
+      [x|acc]
+  end
+end
+```
+
+I understand this new bit of code, but I'm afraid explaining it in graphic detail will have to wait for another day. I am working on a `foldl/foldr` edition of Core Elixir for some point in the future.  So stay tuned there.
+
+_Thanks once again to Daniel and Kash for their contributions/pull requests/gists._ 
 
 _If you have any comments, questions, complaints, criticisms, or corrections, catch me on Twitter, [@AugieDB](https://twitter.com/augiedb). Or [make a pull request on Github](https://github.com/augiedb/VariousAndSundryCS)!  That Twitter handle and Github ID is the same as my GMail account, if you want to deal with it more quietly. I want these articles to be factually correct and will update them as necessary._
 

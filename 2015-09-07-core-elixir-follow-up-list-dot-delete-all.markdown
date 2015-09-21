@@ -6,11 +6,11 @@ comments: true
 categories: coreelixir elixir delete list
 ---
 
-Two updates from [the List.delete_all post](http://variousandsundry.com/cs/blog/2015/08/27/core-elixir-list-dot-delete-slash-2-and-list-dot-delete-all-slash-2/) a couple weeks back:
+Three updates from [the List.delete_all post](http://variousandsundry.com/cs/blog/2015/08/27/core-elixir-list-dot-delete-slash-2-and-list-dot-delete-all-slash-2/) a couple weeks back:
 
 ## Naming is Hard
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/augiedb">@augiedb</a> <a href="https://twitter.com/elixirfountain">@elixirfountain</a> def delete_all(list) when is_list(list) do [] end # There, I implemented it for you :-)</p>&mdash; __red__ (@noidd) <a href="https://twitter.com/noidd/status/637424696447889408">August 29, 2015</a></blockquote>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/augiedb">@augiedb</a> <a href="https://twitter.com/elixirfountain">@elixirfountain</a> def delete_all(list) when is_list(list) do [ ] end # There, I implemented it for you :-)</p>&mdash; __red__ (@noidd) <a href="https://twitter.com/noidd/status/637424696447889408">August 29, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Yeah, that's a fair point.  A better name for the function might be `List.delete_all_of`, maybe?  ("Delete all of the 5s from this list.")  It's tough to be descriptive and terse at the same time. Nobody wants to type `List.delete_all_values_from_this_list_that_equal_this`.  We're not Objective-C with XCode to autocomplete all of that for us.  
@@ -26,14 +26,14 @@ I'm a heretic.
 
 ```elixir
   def delete_all(list, value) do
-    delete_all(list, value, []) |> Enum.reverse
+    delete_all(list, value, [] ) |> Enum.reverse
   end
 
-  defp delete_all([h|[]], value, end_list) when h === value do
+  defp delete_all([ h | [] ], value, end_list) when h === value do
     end_list
   end
 
-  defp delete_all([h|[]], _value, end_list) do
+  defp delete_all([ h | [] ], _value, end_list) do
     [h|end_list]
   end
 
@@ -49,15 +49,15 @@ I'm a heretic.
 I didn't think too much about it.  I got something to work and stopped there, because I knew I'd be working on the problem in different styles.  Still, there's an obvious pattern matching issue here that I should have noticed.  Take a look at these two functions, in particular:
 
 ```elixir
-  defp delete_all([h|[]], value, end_list) when h === value do
-  defp delete_all([h|t], value, end_list) when h === value do
+  defp delete_all([ h | [] ], value, end_list) when h === value do
+  defp delete_all([ h | t  ], value, end_list) when h === value do
 ```
 
 You can pattern match inside the arguments.  If you're looking for the case where `h` and `value` are the same thing, you don't need to put that in the guard clause.  You can match it inside the argument list: 
 
 ```elixir
-  defp delete_all([value|[]], value, end_list) do
-  defp delete_all([value|t], value, end_list) do
+  defp delete_all([ value | [] ], value, end_list) do
+  defp delete_all([ value | t  ], value, end_list) do
 ```
 
 Now, look at that and realize that in one major case, it's the same function.  When the tail is an empty list, the first version will be triggered instead of the second.  Can we combined those two into one?  Yes, if the base case (the one that returns the final results) is rewritten to look for just an empty list.
@@ -92,7 +92,7 @@ In jumped [Kash Nouroozi](https://twitter.com/knrz_) with [a gist](https://gist.
 
 ```elixir
 def delete_all(collection, value) do
-  Enum.reduce( collection, [], fn(x, acc) ->
+  Enum.reduce( collection, [ ], fn(x, acc) ->
     case x !== value do
       true  -> [x | acc]   # Not the value, add it to the list
       false -> acc         # Matches the value, so don't add it
@@ -105,7 +105,7 @@ end
 
 ```elixir
 def delete_all(collection, value) when is_list(collection) do
-  List.foldr collection, [], fn
+  List.foldr collection, [ ], fn
     x, acc when x == value ->
       acc
     x, acc ->

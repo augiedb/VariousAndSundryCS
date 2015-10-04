@@ -28,7 +28,7 @@ When this reporter pointed out that [structs were a type of map](http://elixir-l
 
 Some wondered whether this was already old news, or if Valim had engaged in a bit of inside information trading.   Rumors quickly spread that Dave Thomas and Moose didn't attend the conference at the last minute because they were too busy getting a jumpstart on rewriting "Programming Elixir."  
 
-Sasa Juric and Benjamin Tan Wei Hao couldn't not be reached for comment.  Likely, they were already rewriting.
+Saša Jurić and Benjamin Tan Wei Hao couldn't not be reached for comment.  Likely, they were already rewriting.
 
 We asked the Erlang core team what they thought of this news.  In a prepared statement, they answered, "It took us 30 friggin' years to come up with a map. The biggest thing we've deprecated lately was a random function, and even that took years of debate.  This Valim kid needs to slow down."
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Serial Deprecator Jose Valim Strikes Again"
+title: "Serial Deprecator José Valim Strikes Again"
 date: 2015-10-03 22:32:08 -0400
 comments: true
 categories: elixir hashset hashdict dict set
@@ -8,11 +8,11 @@ categories: elixir hashset hashdict dict set
 
 We pause this blog for late-breaking news out of ElixirConf 2015.
 
-##Jose Valim: The most dangerous man in language design?
+##José Valim: The most dangerous man in language design?
 
 {% img http://variousandsundry.com/cs/images/valim_file_photo.jpg "Despite his baby face and broad smile, Valim is turning out to be the biggest core language feature killer known to modern language design." %}
 
-__Austin, TX:__ Serial deprecator Jose Valim struck again this weekend, claiming four more victims in his ongoing campaign of "simplification."
+__Austin, TX:__ Serial deprecator José Valim struck again this weekend, claiming four more victims in his ongoing campaign of "simplification."
 
 In a shocking speech in front of a crowd of over 250 people, Valim vowed to take out no less than four data structures in the Elixir language.  HashSet, HashDict, Set, and Dict would be the next to go.
 

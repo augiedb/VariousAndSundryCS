@@ -20,17 +20,17 @@ There are plenty of examples in the two videos of people drawing with their fles
 
 From the [iPad Pro introduction video.](https://www.youtube.com/watch?v=WlYC8gDvutc) and the  [Apple Pencil introduction video](https://www.youtube.com/watch?v=iicnVez5U7M):
 
-{% img http://variousandsundry.com/cs/images/finger2.jpg }
+{% img http://variousandsundry.com/cs/images/finger2.jpg %}
 {% img http://variousandsundry.com/cs/images/pencil_intro_palm1.jpg %}
 {% img http://variousandsundry.com/cs/images/pencil_intro_palm2.jpg %}
 {% img http://variousandsundry.com/cs/images/pencil_intro_palm3.jpg %}
-{% img http://variousandsundry.com/cs/images/palm2.jpg%}
-{% img http://variousandsundry.com/cs/images/palm3.jpg%}
+{% img http://variousandsundry.com/cs/images/palm2.jpg %}
+{% img http://variousandsundry.com/cs/images/palm3.jpg %}
 {% img http://variousandsundry.com/cs/images/palm1.jpg %}
 
 Even the  pinky can't distract the iPad Pro
 
-{% img http://variousandsundry.com/cs/images/finger1.jpg }
+{% img http://variousandsundry.com/cs/images/finger1.jpg %}
 
 Lesson learned? We often find proof to fit our own narratives, when the truth is staring us right in the face.
 

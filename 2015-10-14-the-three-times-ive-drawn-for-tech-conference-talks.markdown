@@ -14,7 +14,7 @@ For Avdi Grimm's 2014 talk, ["MythBashers: Adventures in Overlooked Technologies
     
 For Torben Hoffmann's Erlang User Conference 2015 talk, ["Using Elixir to Get the Fun Back in Lego Mindstorms"](https://vimeo.com/132719069)
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">.<a href="https://twitter.com/augiedb">@augiedb</a> making a virtual appearance at <a href="https://twitter.com/hashtag/ElixirConf?src=hash">#ElixirConf</a> <a href="http://t.co/H9wtnhkp5Q">pic.twitter.com/H9wtnhkp5Q</a></p>&mdash; (╯°□°）╯︵ ɟɟǝſ̲ (@jeffweiss) <a href="https://twitter.com/jeffweiss/status/650344151746150401">October 3, 2015</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% img http://variousandsundry.com/cs/images/slide_elixirconf_proctor.jpg %}
 
-And, finally, for Steven Proctor's Elixir Conf 2015 talk, "BEAMing with Joy."  (Soon to come to Confreaks, but not just yet...)
+And, finally, for Steven Proctor's Elixir Conf 2015 talk, ["BEAMing with Joy."](https://www.youtube.com/watch?v=g7C7ai96wLY)
 

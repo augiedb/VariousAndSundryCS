@@ -6,6 +6,9 @@ comments: true
 categories: elixir Elixir CoreElixir coreelixir path
 ---
 
+{% img http://variousandsundry.com/cs/images/elixir_path_relative.png %}
+
+
 Sit back, this one has tangents on top of tangents.
 
 (Don't I say that every time?)

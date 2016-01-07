@@ -5,7 +5,9 @@ date: 2016-01-06 00:29:52 -0500
 comments: true
 categories: apple imac
 ---
-I'm pricing out a new iMac 27" desktop. I'm very excited to update my five year old model and get a retina display along the way.  Sometimes, old machines just get slow for seemingly no reason.  C'est la vie. 
+{% img http://variousandsundry.com/cs/images/imac_27_late2015.png %}
+
+I'm pricing out [a new iMac 27" desktop](http://www.apple.com/imac/). I'm very excited to update my five year old model and get a retina display along the way.  Sometimes, old machines just get slow for seemingly no reason.  C'est la vie. 
 
 I used to buy a new Windows PC every two years back in the day, but the processors were also jumping to new speeds quite often then, too.  Things have slowed down in that regard, but I think five years is still a good run. Apple bloggers and podcast pundits would have you believing you need a new machine every 10 months, at worst, but let's be honest with ourselves for a moment here: We don't.
 
